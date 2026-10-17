@@ -1,10 +1,10 @@
-# 💎 Diamond Price Regression
+# Diamond Price Regression
 
 Proyek *machine learning* **regresi** untuk memprediksi harga berlian (`price`, USD) dari karakteristiknya,
 menggunakan dataset **Diamonds** (53.940 baris, 10 kolom). Alur *data cleaning* dan *transformation* mengikuti
 materi **Latihan: Data Cleaning dan Transformation**.
 
-## 📊 Alur Kerja
+## Alur Kerja
 
 1. **Data loading:** `diamonds.csv` dibagi 80% latih / 20% uji (`random_state=42`) menjadi `train.csv` (43.152 baris) dan `test.csv` (10.788 baris). Pembagian dilakukan **sebelum** cleaning untuk mencegah *data leakage*.
 2. **Identifikasi dataset & statistik deskriptif:** `info()`, `describe(include="all")`, skewness, dan distribusi kategori.
@@ -29,13 +29,13 @@ materi **Latihan: Data Cleaning dan Transformation**.
 
 > Angka berasal dari eksekusi `tugasml.ipynb` dengan `random_state=42` (scikit-learn 1.8.0, pandas 3.0.2). Hasil bisa sedikit berbeda pada versi *library* lain.
 
-## ⚠️ Catatan dan Keterbatasan
+## Catatan dan Keterbatasan
 
 - **Pemangkasan outlier membuang berlian besar.** Batas IQR untuk `carat` adalah 2,00, sehingga berlian di atas 2 karat tidak ada di data latih maupun data uji. Model dan angka di atas valid untuk berlian berukuran umum, **tidak untuk berlian sangat besar**.
 - **Data uji ikut difilter** (988 dari 10.788 baris dibuang oleh aturan yang sama), sehingga metrik tidak sebanding langsung dengan evaluasi pada data mentah yang utuh.
 - Ridge dan Linear Regression nyaris identik karena data banyak dengan fitur sedikit, jadi regularisasi hampir tidak berpengaruh.
 
-## 📁 Struktur Proyek
+## Struktur Proyek
 
 ```
 diamond-price-regression/
@@ -97,3 +97,4 @@ Dataset Diamonds dari repositori ggplot2 (tidyverse):
 
 Python · pandas · NumPy · matplotlib · seaborn · scikit-learn · joblib
 # diamond-price-regression
+Author : Taufik Fachri Herjuna
